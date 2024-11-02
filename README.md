@@ -14,6 +14,8 @@
 
 ## Présentation du Projet
 Développement d’un site responsive en HTML, CSS et Rust pour l’entreprise fictive Pedalize, dans le cadre d’un projet demandé universitaire, sur une durée d’un mois.
+![1](./docs/templates/Hero01.png)
+![2](./docs/templates/Hero02.png)
 
 ## Instructions d'Exécution sur Windows
 
