@@ -13,7 +13,7 @@
   - HTML5, CSS3, JavaScript, SQL (MariaDB), Rust (API)
 
 ## Présentation du Projet
-Développement d’un site responsive en HTML, CSS et Rust pour l’entreprise fictive Pedalize, dans le cadre d’un projet demandé universitaire, sur une durée d’un mois.
+Développement d’un site responsive en HTML, CSS et Rust pour l’entreprise fictive Pedalize, dans le cadre d’un projet universitaire, sur une durée d’un mois.
 
 ## Instructions d'Exécution sur Windows
 
