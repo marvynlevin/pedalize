@@ -53,25 +53,34 @@ N'oubliez pas d'exécuter les scripts SQL situés dans le répertoire `\api\db`.
 
 Ouvrez une nouvelle fenêtre PowerShell et exécutez les commandes suivantes :
 ```shell
+# Vérifier les versions de Rust et Cargo
 rustc --version
 cargo --version
 
+# Se déplacer dans le dossier de construction de l'API
 cd \Desktop\pedalize\api\build
+
+# Compiler le projet en mode release
 cargo build --release
 
+# Se rendre dans le dossier des binaires compilés
 cd ..\target\release
 
+# Créer ou écraser le fichier de configuration de la base de données
 Set-Content -Path "database_config.json" -Value @"
 {
-    "username": "identifiant",
-    "password": "votre_mot_de_passe",
-    "database": "pedalize",
-    "host": "localhost",
-    "port": 3306
+    "username": "identifiant",         # Indiquer le nom d'utilisateur de la base
+    "password": "votre_mot_de_passe",  # Indiquer le mot de passe de la base
+    "database": "pedalize",            # Indiquer le nom de la base
+    "host": "localhost",               # Spécifier le serveur local
+    "port": 3306                       # Spécifier le port MySQL par défaut
 }
 "@
+
+# Afficher le contenu du fichier de configuration
 Get-Content -Path "database_config.json"
 
+# Lancer l'application Rust
 cargo run
 ```
 
