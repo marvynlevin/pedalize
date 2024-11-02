@@ -13,48 +13,50 @@ struct DatabaseConfig {
     pub password: String,
     pub database: String,
     pub host: String,
-    pub port: u16,
+    pub port: u16
 }
 
 impl DatabaseConfig {
     fn read() -> Result<Self, Box<dyn Error>> {
         let c = fs::read_to_string("database_config.json")?;
-        serde_json::from_str(&c).map_err(|e| e.into())
+        serde_json::from_str(c.as_str()).map_err(|e| e.into())
     }
 }
 
 #[derive(Clone)]
 pub(crate) struct Database {
-    pub(crate) pool: Arc<RwLock<MySqlPool>>,
+    pub(crate) pool: Arc<RwLock<MySqlPool>>
 }
 
 impl Database {
     pub(crate) async fn init() -> Self {
-        // Lire la configuration de la base de données
-        let config = DatabaseConfig::read().unwrap_or_else(|e| {
-            error!(target: "Database", "Cannot read the database config: {e:#?}");
-            panic!("Unable to load the configuration of the database");
-        });
+        let config = match DatabaseConfig::read() {
+            Ok(c) => c,
+            Err(e) => {
+                error!(target: "Database", "Cannot read the database config: {e:#?}");
+                panic!("Unable to load the configuration of the database");
+            }
+        };
 
-        // Initialiser la connexion à la base de données
-        let pool = MySqlPool::connect_with(
+        let conn = MySqlPool::connect_with(
             MySqlConnectOptions::new()
-                .database(&config.database)
-                .username(&config.username)
-                .password(&config.password)
-                .host(&config.host)
+                .database(config.database.as_str())
+                .username(config.username.as_str())
+                .charset("utf8")
+                .password(config.password.as_str())
                 .port(config.port)
-                .charset("utf8"),
-        ).await.unwrap_or_else(|e| {
-            error!(target: "Database", "Cannot connect to the database: {e:#?}");
+                .host(config.host.as_str())
+        ).await;
+
+        if let Err(e) = conn {
+            error!(target: "Database", "Cannot connect the database: {e:#?}");
             panic!("Unable to connect to the database");
-        });
+        }
 
         Self {
-            pool: Arc::new(RwLock::new(pool)),
+            pool: Arc::new(RwLock::new(conn.unwrap()))
         }
     }
-
     pub(crate) async fn get_pool(&self) -> RwLockReadGuard<'_, MySqlPool> {
         self.pool.read().await
     }

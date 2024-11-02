@@ -51,17 +51,19 @@ Ouvrez une nouvelle fenêtre PowerShell et exécutez les commandes suivantes :
 ```shell
 rustc --version
 cargo --version
-@"
-{
-    "username": "user",
-    "password": "password",
-    "database": "database",
-    "host": "localhost",
-    "port": 0000
-}
-"@ | Out-File -Encoding utf8 database_config.json
 
 cd C:\Users\X\X\pedalize\api\target\release
+Set-Content -Path "database_config.json" -Value @"
+{
+    "username": "identifiant",
+    "password": "votre_mot_de_passe",
+    "database": "pedalize",
+    "host": "localhost",
+    "port": 3306
+}
+"@
+Get-Content -Path "database_config.json"
+
 cargo run
 ```
 
