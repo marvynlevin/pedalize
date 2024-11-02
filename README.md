@@ -1,4 +1,5 @@
 # Équipe Team Chartreuse - Projet BUT Informatique Pedalize - 02/09/2023 17/10/2023
+![logo Team Chartreuse](./docs/logo/logoTeamChartreuse.png)
 
 ## Informations Équipe
 - **Membres** :
