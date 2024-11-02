@@ -10,7 +10,7 @@
 
 ## Technologies Utilisées
 - **Langages de Programmation** : 
-  - HTML5, CSS3, JavaScript, SQL (MariaDB), Rust (API)
+  - HTML5, CSS3 (Responsive), JavaScript, SQL (MariaDB), Rust (API)
 
 ## Présentation du Projet
 Développement d’un site responsive en HTML, CSS et Rust pour l’entreprise fictive Pedalize, dans le cadre d’un projet demandé universitaire, sur une durée d’un mois.
