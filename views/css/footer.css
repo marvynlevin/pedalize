@@ -1,0 +1,165 @@
+:root {
+    --link-padding: 10px;
+}
+
+footer{
+    position: flex;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: solid 1px black;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+section.newsletter{
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    max-width:100%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+div.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1.newsletter{
+    display: inline-block;
+    width: fit-content;
+    margin:0px;
+}
+
+p.newsletter{
+    margin:5px;
+}
+
+form.newsletter{
+    display: flex;
+    flex-direction: row;
+    border:1px solid black;
+    width: fit-content;
+    height:40px;
+}
+
+
+input.newsletter{
+    display: flex;
+    padding: 0px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 0;
+}
+
+button.newsletter{
+    padding:0px;
+    padding-right: 10px;
+    color: black;
+    background:none;
+}
+
+section.link{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: start;
+    padding-left: var(--link-padding);
+    padding-right: var(--link-padding);
+
+    margin: auto;
+}
+
+div.shop{
+    display: inline-block;
+    flex-direction: column;
+    padding: 3px;
+    text-align: center;
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+div.actus{
+    display: inline-block;
+    flex-direction: column;
+    padding:3px;
+    text-align: center;
+    width: calc(100% / 3);
+}
+
+div.cart{
+    display: inline-block;
+    flex-direction: column;
+    padding: 3px;
+    text-align: center;
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.footer_link {
+    display: block;
+    color: #111;
+    text-decoration: none;
+    opacity: .5;
+
+}
+
+.footer_link:not(:first-child) {
+    margin-top: 8px;
+}
+
+@media (min-width:1024px) {
+    footer{
+        position: flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: solid 1px black;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    section.newsletter{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding: 40px;
+        padding-top: 0px;
+        border-right: solid 1px gray;
+        height: 50%;
+    }
+
+    div.shop{
+        display: inline-block;
+        flex-direction: column;
+        padding: 3px;
+        text-align: center;
+        width: calc(100% / 3);
+        height: 100%;
+    }
+
+    section.link{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: start;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+
+    
+}

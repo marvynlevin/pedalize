@@ -1,0 +1,234 @@
+:root {
+    --navbar-height: 80px;
+    --navbar-margin-x: 10vw;
+}
+
+#navbar {
+    height: var(--navbar-height);
+    background-color: #0D0D0D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 3;
+    transition: all 200ms ease;
+
+    width: calc(100vw - 4rem);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#navbar.active {
+    margin-bottom: 240px;
+}
+
+#navbar .logo, #navbar .logo svg {
+    height: calc(var(--navbar-height)/3);
+    width: auto;
+}
+
+#navbar .graphic-logo {
+    display: none;
+}
+
+#navbar .graphic-logo img {
+    width: 7rem;
+}
+
+#navbar .left {
+    display: flex;
+    align-items: center;
+}
+
+#navbar .left .logo-pedalize {
+    display: flex;
+    align-items: center;
+}
+
+#navbar .burger-menu img {
+    height: calc(var(--navbar-height)/2);
+    color: white;
+}
+
+#navbar .burger-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#navbar .buttons .desktop-search {
+    display: none;
+}
+
+#navbar .buttons:not(.active) {
+    transform: translateY(-520%);
+    z-index: -1;
+}
+
+#navbar .buttons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: var(--navbar-margin-x);
+    left: var(--navbar-margin-x);
+    transform: translateY(var(--navbar-height));
+    z-index: 2;
+    transition: all 200ms ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#navbar .buttons ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-inline-start: 0;
+    width: 100%;
+}
+
+#navbar .buttons li {
+    margin: 16px 0;
+}
+
+#navbar .buttons li:hover {
+    text-decoration: underline;
+}
+
+#navbar .desktop-right {
+    display: none;
+}
+
+#navbar .buttons a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+#navbar .buttons a span{
+    color: green;
+}
+
+#navbar .buttons.active {
+    height: max-content;
+    padding-bottom: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    right: 0;
+    left: 0;
+}
+
+
+@media screen and (min-width: 1024px) {
+    #navbar .graphic-logo {
+        display: block;
+        margin-right: 15px;
+    }
+
+    #navbar .buttons:not(.active), #navbar .buttons.active {
+        z-index: 2;
+        color: gainsboro;
+        position: static;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #navbar .buttons .desktop-search {
+        display: block;
+    }
+
+    #navbar .buttons .desktop-search {
+        position: relative;
+        border-radius: 15px;
+        background-color: #1E1E1E;
+        color: #fff;
+    }
+
+    #navbar .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    #navbar .buttons .desktop-search input {
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        height: 5px;
+        background: transparent;
+        color: #fff;
+    }
+
+    #navbar .buttons .desktop-search input::placeholder {
+        color: #979797;
+    }
+
+    #navbar .buttons li {
+        margin: 0 10px;
+    }
+
+    #navbar .buttons li {
+        margin: 0 10px;
+    }
+
+    #navbar .buttons li a {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    #navbar .buttons:not(.active):hover, #navbar .buttons.active:hover {
+        color: white;
+    }
+
+    #navbar .burger-menu {
+        display: none;
+    }
+
+    #navbar .desktop-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbar .desktop-right .market-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar .desktop-right .log-in__button {
+        margin-left: 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    #navbar .desktop-right .log-in__green {
+        color: green;
+    }
+
+    #navbar .buttons:not(.active) {
+        transform: none;
+    }
+
+    #navbar .buttons ul {
+        flex-direction: row;
+    }
+
+    #navbar .buttons a {
+        display: none;
+    }
+
+    #navbar .buttons ul a {
+        display: block;
+        color: gainsboro;
+    }
+}

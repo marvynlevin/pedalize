@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/product_list.css">
+    <link rel="icon" href="static/img/logo.png">
+    <title>Pedalize's Products</title>
+</head>
+<body>
+<nav id="navbar">
+    <section class="left">
+        <div class="graphic-logo">
+            <a href="index.html">
+                <img src="static/img/logo-pedalize.svg" alt="Pedalize">
+            </a>
+        </div>
+
+        <div class="logo-pedalize">
+            <a href="index.html">
+                <img src="static/img/graphic-logo-pedalize.svg" alt="Pedalize">
+            </a>
+        </div>
+    </section>
+
+    <section class="buttons">
+        <ul>
+            <li><a href="product_list.html">Boutique</a></li>
+            <li>Notre savoir faire</li>
+            <li>Contact</li>
+        </ul>
+        <a href="">Log<span>in</span></a>
+        <div class="desktop-search">
+            <img class="search-icon" src="static/img/search-icon.svg" alt="search icon">
+            <input type="text" placeholder="Rechercher">
+        </div>
+    </section>
+
+    <section class="right">
+        <button class="burger-menu">
+            <img src="static/img/burger-menu-icon.svg" alt="Burger menu">
+        </button>
+        <div class="desktop-right">
+            <div class="market-logo">
+                <a href="cart.html">
+                    <img src="static/img/market-logo.svg" alt="market logo">
+                </a>
+            </div>
+            <a href="" class="log-in__button">
+                log<span class="log-in__green">in</span>
+            </a>
+        </div>
+    </section>
+</nav>
+    <main class="container">
+        <div class="filters">
+            <div class="top">
+                <div class="left">
+                    <h1>Filtres</h1>
+                    <p id="clean_filters">Nettoyer les filtres</p>
+                </div>
+<!--                <div class="right">-->
+<!--                    <div class="filter_by">-->
+<!--                        <p>Trier par</p>-->
+<!--                        <details class="select">-->
+<!--                            <summary class="radios">Auswählen...</summary>-->
+<!--                            <ul class="list">-->
+<!--                                <li>Item 1</li>-->
+<!--                                <li>Item 2</li>-->
+<!--                                <li>Item 3</li>-->
+<!--                                <li>Item 4</li>-->
+<!--                                <li>Item 5</li>-->
+<!--                            </ul>-->
+<!--                        </details>-->
+<!--                    </div>-->
+<!--                    <p id="product_count">Affiche N produits</p>-->
+<!--                </div>-->
+            </div>
+
+            <div class="categories">
+                <details>
+                    <summary>Age et sexe</summary>
+                    <div class="ctg">
+                        <label class="radio">
+                            <input type="radio" name="age_sexe">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Homme</p>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="age_sexe">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Femme</p>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="age_sexe">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Enfant</p>
+                        </label>
+                    </div>
+                </details>
+                <details>
+                    <summary>Catégorie</summary>
+                    <div class="ctg">
+                        <label class="radio">
+                            <input type="radio" name="category">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Vélo de route</p>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="category">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Vélo tout terrain</p>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="category">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Gadgets</p>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="category">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>Autres</p>
+                        </label>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Taille</summary>
+                    <div class="ctg">
+                        <label class="checkbox">
+                            <input type="checkbox" name="size">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>S</p>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="size">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>M</p>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="size">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>L</p>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="size">
+                            <div>
+                                <svg class="check" viewBox="-2 -2 35 35" aria-hidden="true">
+                                    <title>checkmark-circle</title>
+                                    <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                                </svg>
+                            </div>
+                            <p>XL</p>
+                        </label>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="list" id="product_list"></div>
+    </main>
+    <script src="js/global.js"></script>
+    <script src="js/list.js" type="module"></script>
+</body>
+</html>

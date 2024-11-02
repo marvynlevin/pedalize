@@ -1,0 +1,210 @@
+.filters {
+    height: 400px;
+    background: #f6f6f6;
+    width: 100%;
+    margin: 30px auto;
+
+    overflow-y: scroll;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list a {
+    text-decoration: none;
+    width: 90%;
+    margin: auto 10px;
+}
+
+.list .product {
+    width: 90%;
+
+    padding: 10px;
+
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.list .product img, .list .product .img {
+    height: 133px;
+    width: 129px;
+
+    background: url("../static/img/no-photo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.list .product h2 {
+    font-size: 3em;
+    margin: 2px 0;
+    text-decoration: none;
+}
+
+.list .product p {
+    font-size: 2em;
+    margin: 2px 0;
+    text-decoration: none;
+}
+
+
+.filters {
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    height: fit-content;
+
+    padding: 5%;
+
+    font-size: 2em;
+}
+
+.filters .top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.filters .top .left {
+    width: 50%;
+}
+.filters .top .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filters .top .right #product_count {
+    font-size: 0.75em;
+    margin: 2px 0;
+}
+
+
+.filters .categories details {
+    width: 95%;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+
+    border-bottom: 1px solid currentColor;
+}
+.filters .categories details summary {
+    list-style: none;
+    user-select: none;
+
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 10px 0;
+}
+.filters .categories details summary::-webkit-details-marker {
+    display: none;
+}
+
+.filters .categories details summary::before {
+    content: "+";
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    position: absolute;
+    right: 10%;
+}
+
+.filters .categories details[open] summary::before {
+    content: "-";
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.filters .categories label {
+    font-size: 0.75em;
+}
+
+.filters .top .right .filter_by {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 0.9em;
+}
+
+.filters .top .right .filter_by p {
+    color: #2D2A2A;
+    margin-right: 5px;
+}
+
+@media (min-width: 1200px) {
+    body {
+        overflow: hidden;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .list {
+        width: 70%;
+        margin: 0;
+        padding: 0;
+
+        height: calc(100vh - var(--navbar-height));
+        overflow-y: scroll;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(200px, auto);
+    }
+
+    .filters {
+        width: calc(30% - 25px);
+        height: calc(100vh - 80px);
+        margin: 0;
+        padding: 0 0 0 25px;
+
+        background: #f6f6f6;
+
+        font-size: 1em;
+    }
+
+    .filters .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters .top .right {
+        margin-top: 50px;
+    }
+
+    .filters .categories label {
+        height: 50px;
+    }
+
+    .filters .filter_by {
+        width: 80%;
+    }
+
+    .filters .categories details summary::before  {
+        content: "+";
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        position: absolute;
+        right: 72%;
+    }
+
+    .list .product h2, .list .product p {
+        font-size: 1em;
+    }
+}

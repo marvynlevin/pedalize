@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+main {
+    margin-top: 80px;
+}
+
+input[type="text"] {
+    padding: 15px 25px;
+    border: 1px solid #000;
+
+    border-radius: 15px;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(0, 0, 0, 0.35)
+}
+
+input[type="checkbox"] {
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+button {
+    padding: 15px 30px;
+    background: #000;
+    color: #fff;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+
+
+.selection {
+    position: relative;
+}
+
+.selection select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+.checkbox,
+.radio {
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.6em 0;
+    box-sizing: border-box;
+    height: 100px;
+}
+.checkbox input[type=checkbox],
+.checkbox input[type=radio],
+.radio input[type=checkbox],
+.radio input[type=radio] {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.checkbox input[type=checkbox] + div,
+.checkbox input[type=radio] + div,
+.radio input[type=checkbox] + div,
+.radio input[type=radio] + div {
+    border: 2px solid #8d9aa9;
+    height: 1.5em;
+    width: 1.5em;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: relative;
+}
+.checkbox input[type=checkbox] ~ div:last-child,
+.checkbox input[type=radio] ~ div:last-child,
+.radio input[type=checkbox] ~ div:last-child,
+.radio input[type=radio] ~ div:last-child {
+    padding-left: 0.5em;
+}
+.checkbox input[type=radio] + div,
+.radio input[type=radio] + div {
+    border-radius: 50%;
+}
+.checkbox input[type=radio] + div::after,
+.radio input[type=radio] + div::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    transform: scale(0.5);
+    opacity: 0;
+    background: black;
+    transition: all 107ms cubic-bezier(0.65, 0.25, 0.56, 0.96);
+}
+.checkbox input[type=checkbox]:focus + div,
+.checkbox input[type=radio]:focus + div,
+.checkbox input[type=checkbox]:active + div,
+.checkbox input[type=radio]:active + div,
+.radio input[type=checkbox]:focus + div,
+.radio input[type=radio]:focus + div,
+.radio input[type=checkbox]:active + div,
+.radio input[type=radio]:active + div {
+    outline: 2px dashed #8d9aa9;
+    outline-offset: 2px;
+}
+.checkbox input[type=checkbox]:checked + div,
+.radio input[type=checkbox]:checked + div {
+    border-color: black;
+    transition: border-color 107ms cubic-bezier(0.65, 0.25, 0.56, 0.96);
+}
+.checkbox input[type=checkbox]:checked + div .check,
+.radio input[type=checkbox]:checked + div .check {
+    opacity: 1;
+    transition: opacity 107ms cubic-bezier(0.65, 0.25, 0.56, 0.96);
+}
+.checkbox input[type=checkbox]:checked + div .check polyline,
+.radio input[type=checkbox]:checked + div .check polyline {
+    -webkit-animation: dash-check 107ms cubic-bezier(0.65, 0.25, 0.56, 0.96) forwards;
+    animation: dash-check 107ms cubic-bezier(0.65, 0.25, 0.56, 0.96) forwards;
+}
+.checkbox input[type=radio]:checked + div,
+.radio input[type=radio]:checked + div {
+    border-color: black;
+}
+.checkbox input[type=radio]:checked + div::after,
+.radio input[type=radio]:checked + div::after {
+    opacity: 1;
+    transform: scale(1);
+}
+.checkbox input[type=checkbox]:indeterminate + div::after,
+.radio input[type=checkbox]:indeterminate + div::after {
+    content: "";
+    height: 4px;
+    width: 60%;
+    left: 20%;
+    top: calc(50% - 2px);
+    position: absolute;
+    background: #8d9aa9;
+    border-radius: 1px;
+}
+.checkbox input[type=checkbox]:disabled ~ div,
+.checkbox input[type=radio]:disabled ~ div,
+.radio input[type=checkbox]:disabled ~ div,
+.radio input[type=radio]:disabled ~ div {
+    color: #8d9aa9;
+    cursor: not-allowed;
+}
+.checkbox input[type=checkbox]:enabled ~ div,
+.checkbox input[type=radio]:enabled ~ div,
+.radio input[type=checkbox]:enabled ~ div,
+.radio input[type=radio]:enabled ~ div {
+    cursor: default;
+}
+
+.check p, .checkbox p, .radio p {
+    margin: 0 0 0 5px;
+    font-size: 1.5em;
+}
+
+.check {
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    color: black;
+    opacity: 0;
+}
+.check polyline {
+    fill: none;
+    transform-origin: 50% 50%;
+    stroke-width: 5px;
+    stroke-dasharray: 22.7713679002;
+    stroke: currentcolor;
+}
+
+@supports (display: grid) {
+    .check polyline {
+        stroke-dashoffset: 22.7713679002;
+    }
+}
+@-webkit-keyframes dash-check {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes dash-check {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
+
+
+
+
+details.select {
+    border: 1px solid #000;
+    border-radius: 7px;
+
+    padding: 15px 20px;
+    margin-bottom: 0;
+
+    width: 210px;
+
+    background: #fff;
+}
+
+details.select summary {
+    list-style: none;
+    user-select: none;
+
+    width: 200px;
+}
+
+details[open].select {
+    border-bottom: none;
+    border-radius: 7px 7px 0 0;
+}
+
+details.select .list {
+    background: #fff;
+    transform: translateY(13px) translateX(-21px);
+
+    width: 250px;
+    position: absolute;
+    z-index: 10;
+
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+
+    border: 1px solid #000;
+    border-radius: 0 0 7px 7px;
+    border-top: none;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+details.select .list li {
+    padding: 5px 0 5px 10px;
+    margin: 0;
+
+    width: calc(100% - 10px);
+}
+
+details.select .list li:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+details.select summary::-webkit-details-marker {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+
+    details.select {
+        width: 233px;
+    }
+}

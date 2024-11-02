@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Panier</title>
+
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="icon" href="static/img/logo.png">
+</head>
+<body>
+<nav id="navbar">
+    <section class="left">
+        <div class="graphic-logo">
+            <a href="index.html">
+                <img src="static/img/logo-pedalize.svg" alt="Pedalize">
+            </a>
+        </div>
+
+        <div class="logo-pedalize">
+            <a href="index.html">
+                <img src="static/img/graphic-logo-pedalize.svg" alt="Pedalize">
+            </a>
+        </div>
+    </section>
+
+    <section class="buttons">
+        <ul>
+            <li><a href="product_list.html">Boutique</a></li>
+            <li>Notre savoir faire</li>
+            <li>Contact</li>
+        </ul>
+        <a href="">Log<span>in</span></a>
+        <div class="desktop-search">
+            <img class="search-icon" src="static/img/search-icon.svg" alt="search icon">
+            <input type="text" placeholder="Rechercher">
+        </div>
+    </section>
+
+    <section class="right">
+        <button class="burger-menu">
+            <img src="static/img/burger-menu-icon.svg" alt="Burger menu">
+        </button>
+        <div class="desktop-right">
+            <div class="market-logo">
+                <a href="cart.html">
+                    <img src="static/img/market-logo.svg" alt="market logo">
+                </a>
+            </div>
+            <a href="" class="log-in__button">
+                log<span class="log-in__green">in</span>
+            </a>
+        </div>
+    </section>
+</nav>
+
+    <main>
+        <div class="desktop_row">
+            <div class="the_cart">
+                <h1>Votre panier</h1>
+                <p>Vous n'êtes pas prêt à passer à la caisse ? <a id="continue_shopping" href="product_list.html">Continuer vos achats</a></p>
+
+                <div class="product_list" id="product_container">
+
+                    <p class='no_product'>Aucun produit n'a été ajouté dans votre panier pour le moment</p>
+
+<!--                    <div class="product">-->
+<!--                        <div class="img" style="background: center url('static/img/test.jpg')"></div>-->
+<!--                        <div class="infos">-->
+<!--                            <h2>Name</h2>-->
+<!--                            <p>Quantité : 3</p>-->
+<!--                            <h3>56€</h3>-->
+<!--                        </div>-->
+<!--                        <div class="remove">-->
+<!--                            <p>Supprimer</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product">-->
+<!--                        <div class="img"></div>-->
+<!--                        <div class="infos">-->
+<!--                            <h2>Name</h2>-->
+<!--                            <p>Quantité : 3</p>-->
+<!--                            <h3>56€</h3>-->
+<!--                        </div>-->
+<!--                        <div class="remove">-->
+<!--                            <p>Supprimer</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <form class="summary" action="cart.html" method="post">
+                <h2>Récapitulatif de la commande</h2>
+
+                <label for="coupon" style="display: none">Code promotionnelle</label>
+                <input type="text"
+                       placeholder="Entrer un code promotionnelle"
+                       name="coupon"
+                       id="coupon">
+
+                <div class="prices">
+                    <div class="full">
+                        <p>Subtotal</p>
+                        <p class="margin" id="price">200€</p>
+                    </div>
+                    <div class="full">
+                        <p>Transport</p>
+                        <p class="margin">Calculé à l'étape suivante</p>
+                    </div>
+                    <div class="sep"></div>
+                    <div class="full">
+                        <p>Total</p>
+                        <p class="margin" id="total_price">200€</p>
+                    </div>
+                </div>
+
+                <button type="submit">Continuer</button>
+            </form>
+        </div>
+
+        <div class="informations">
+            <h2>Informations sur la commande</h2>
+
+            <details>
+                <summary>Politique de retour</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
+            <details>
+                <summary>Politique de retour</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
+        </div>
+
+    </main>
+<footer>
+    <section class="newsletter">
+        <div class="newsletter">
+            <h1 class="newsletter">Suivre notre actualité</h1>
+            <p class="newsletter">Pedalize s'engage pour vous offrir le meilleur du monde du vélo</p>
+            <form class="newsletter" method="POST" action="footer.html">
+                <input type="email"  class="newsletter" name="email" placeholder="Adresse e-mail">
+                <button type="submit" class="newsletter">S'enregistrer</button>
+            </form>
+        </div>
+    </section>
+    <section class="link">
+        <div class="shop">
+            <p class="shop">Magasin</p>
+            <a href="?" class="footer_link">Homme</a>
+            <a href="?" class="footer_link">Femme</a>
+            <a href="?" class="footer_link">Enfant</a>
+        </div>
+        <div class="actus">
+            <p class="actus">Actualité</p>
+            <a href="?" class="footer_link">Rampage</a>
+            <a href="?" class="footer_link">Montain of hell</a>
+            <a href="?" class="footer_link">Megavalanche</a>
+            <a href="?" class="footer_link">Enduro du lion</a>
+        </div>
+        <div class="cart">
+            <p>Achats</p>
+            <a href="?" class="footer_link">Votre panier</a>
+            <a href="?" class="footer_link">Cartes cadeaux</a>
+        </div>
+    </section>
+</footer>
+
+    <script src="js/burger-menu.js"></script>
+    <script src="js/cart.js" type="module"></script>
+</body>
+</html>

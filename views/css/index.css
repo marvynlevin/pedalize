@@ -1,0 +1,192 @@
+
+/* Page */
+body {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* Responsivité */
+
+/* Version ordinateur*/
+@media (min-width: 1024px) {
+    main.accueil p {
+        font-size: 22px;
+    }
+    
+    main.accueil h1 {
+        font-size: 50px;
+    }
+    
+    main.accueil h2 {
+        font-size: 40px;
+    }
+    
+    main.accueil h3 {
+        font-size: 28px;
+    }
+    
+    section.container-events button.button-discover {
+        font-size: 18px;
+        width: 150px;
+    }
+
+    #tel {
+        display: none;
+    }
+
+    .container-center{
+        display: flex;
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        flex-direction: row;
+    }
+
+    .event {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Centre verticalement */
+    }
+
+    .column-align {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Version téléphone*/
+@media (max-width: 1024px) {
+    main.accueil p {
+        font-size: 15px;
+    }
+
+    main.accueil h1 {
+        font-size: 40px;
+    }
+
+    main.accueil h2 {
+        font-size: 30px;
+    }
+
+    main.accueil h3 {
+        font-size: 20px;
+    }
+
+    #ordi {
+        display: none;
+    }
+
+    .container-center{
+        display: flex;
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        flex-direction: column;
+    }
+
+    section.container-events button.button-discover {
+        font-size: 15px;
+        width: 180px;
+    }
+
+    section.container-events section.event img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+main.accueil .center{
+    display: block;
+    margin: 0 auto;
+    width: auto;
+}
+
+main.accueil .left{
+    display: block;
+    margin: 0px 10% 0 10%;
+    width: auto;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.txt-align {
+    text-align: center;
+}
+
+.button-magasin {
+    background-color: #ffffff; /* Couleur de fond du bouton */
+    color: #0D0D0D; /* Couleur de la police du bouton */
+    font-family: Arial, sans-serif; /* Police du texte du bouton */
+    font-size: 16px; /* Taille de la police */
+    border-radius: 1px; /* Coins arrondis du bouton */
+    padding: 10px 20px; /* Rembourrage (espace à l'intérieur du bouton) */
+    border: 1px solid #000; /* Bordure noire de 2 pixels */
+    cursor: pointer; /* Changement du curseur lors du survol du bouton */
+}
+
+.button-magasin:hover {
+    background-color: #cacbcc; /* Couleur de fond au survol du bouton */
+}
+
+.flex-marques {
+    margin: 7px; /* Espace entre les éléments */
+    padding: 7px; /* Espace à l'intérieur des éléments */
+    /*border: 1px solid #000; /* Bordure pour chaque élément */
+}
+
+section.container-events {
+    background-color: #0D0D0D ;
+}
+
+section.container-events hr.light-line {
+    width: 60%; /* Définissez la longueur souhaitée en pourcentage ou en pixels */
+    height: 2px; /* Définissez l'épaisseur souhaitée en pixels */
+    background-color: #ffffff; /* Couleur de la ligne */
+    border-radius: 5%; /* Bordure cassée*/
+    margin: 0 auto; /* Centre la ligne horizontalement si la largeur est inférieure à 100% */
+}
+
+section.container-events img {
+    display: block;
+    margin: 40px auto;
+    padding: 20px 10% 10px 10%;
+}
+
+section.container-events h3 {
+    text-align: left;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0px 10% 0px 10%;
+}
+
+section.container-events p {
+    text-align: justify;
+    color: #ffffff;
+    size: 32px;
+    padding: 0px 10% 0px 10%;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section.container-events section.event {
+    margin: 0px 10% 0px 10%;
+}
+
+section.container-events button.button-discover {
+    background-color: #5EB10B; /* Couleur de fond du bouton */
+    color: #ffffff; /* Couleur de la police du bouton */
+    /*font-size: 25px; /* Taille de la police */
+    /*width: 400px;*/
+    height: auto;
+    border-radius: 15px; /* Coins arrondis du bouton */
+    padding: 4px 12px; /* Rembourrage (espace à l'intérieur du bouton) */
+    cursor: pointer; /* Changement du curseur lors du survol du bouton */
+}
+
+section.container-events button.button-discover:hover {
+    background-color: #6fcf0e; /* Couleur de fond au survol du bouton */
+}
