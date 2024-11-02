@@ -52,7 +52,11 @@ Ouvrez une nouvelle fenêtre PowerShell et exécutez les commandes suivantes :
 rustc --version
 cargo --version
 
-cd C:\Users\X\X\pedalize\api\target\release
+cd \Desktop\pedalize\api\build
+cargo build --release
+
+cd ..\target\release
+
 Set-Content -Path "database_config.json" -Value @"
 {
     "username": "identifiant",
