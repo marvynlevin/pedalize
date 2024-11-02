@@ -36,7 +36,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'identifiant'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 # Créer la base de données
-mysql -u marvyn -p
+mysql -u identifiant -p
 CREATE DATABASE pedalize;
 SHOW DATABASES;
 USE pedalize;
